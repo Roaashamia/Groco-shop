@@ -1,99 +1,107 @@
-.overlay{
-    background-image:url(../image/load3.jpg);
-    display: block;
-    width: 100%;
-    position: fixed;
-    TOP:0;
-    height: 100%;
-    z-index: 2000;
-    background-size: cover;
+.overlay {
+  background-image: url(../image/load3.jpg);
+  display: block;
+  width: 100%;
+  position: fixed;
+  TOP: 0;
+  height: 100%;
+  z-index: 2000;
+  background-size: cover;
+  background-color: #fff;
 }
-.overlay::after{
+
+.overlay::after {
   content: '';
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: #ffffff69;
   z-index: 2;
 }
-.overlay .content{
+
+.overlay .content {
   position: absolute;
-  top:40%;
+  top: 40%;
   left: 50%;
-  transform: translate(-50%,-40%);
+  transform: translate(-50%, -40%);
   z-index: 3;
   width: 100%;
   animation: x 2s 1;
   transition: 0.3s;
 }
+
 @keyframes x {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+
+  100% {
     opacity: 1;
   }
-  
+
 }
 
-.overlay.hide{
-    display: none;
+.overlay.hide {
+  display: none;
 }
-.overlay .content p{
+
+.overlay .content p {
   color: var(--main-color-two);
   font-size: 30px;
   font-weight: bold;
   text-align: center;
 }
-.overlay .content p i{
+
+.overlay .content p i {
   color: var(--main-color-two);
 }
 
 
 .loader {
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 20em;
-    height: 1em;
-    border-radius: 8px;
-    background-color: #47a7ff77;
-    display: block;
-    z-index: 6;
-  }
-  
-  .loader div {
-    height: 100%;
-    width: 100%;
-    border-radius: 8px;
-    background-color: #ff5a00;
-    animation: width7435 5s linear infinite;
-    transition: all;
-    z-index: 6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20em;
+  height: 1em;
+  border-radius: 8px;
+  background-color: #47a7ff77;
+  display: block;
+  z-index: 6;
+}
 
-  }
-  
-  @keyframes width7435 {
-    from {
-      /*width: 0;*/
-      transform: scaleX(0);
-    }
-  
-    to {
-      transform: scaleX(1);
-    }
-  }
-  
-@media (max-width:575px) {
-  .overlay .content p{
-    font-size: 20px;
-  }
-.loader {
-  width: 14em;
+.loader div {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #ff5a00;
+  animation: width7435 5s linear infinite;
+  transition: all;
+  z-index: 6;
 
 }
+
+@keyframes width7435 {
+  from {
+    /*width: 0;*/
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (max-width:575px) {
+  .overlay .content p {
+    font-size: 20px;
+  }
+
+  .loader {
+    width: 14em;
+
+  }
 
 }
